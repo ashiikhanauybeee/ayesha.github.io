@@ -1,0 +1,327 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    transition: all 0.5s ease;
+}
+body{
+    
+    font-family: sans-serif;
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238. 174, 202, 1)0%, rgba(148, 187, 233, 1)100%);
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display:grid;
+    place-items: center;
+    }
+    i{
+        font-size: 30px;
+        cursor: pointer;
+        transform:translate(-50%, -50%) ;
+    }
+    
+.calculator {
+    position: relative;
+    height: 560px;
+    max-width: 77%;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #6d6765;
+    flex-grow:inherit;
+    box-shadow: -4px -4px 3px  rgb(121, 101, 101), 3px 3px 3px rgb(121, 101, 101);
+}
+.them-toggler {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color:#fff;
+    cursor: pointer;
+    z-index: 1;
+}
+.them-toggler.active{
+    color: #333;
+}
+
+.them-toggler.active::before{
+    background-color: #fff;
+    
+}
+.them-toggler::before {
+    content: "";
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #333;
+    z-index: -1;
+}
+#display{
+    margin: 0 10px;
+    height: 120px;
+    width: auto;
+    max-width: 398px;
+    display: flex;
+    align-items:flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    margin-bottom: 10px;
+    overflow-y: scroll;
+    border:1.5PX solid BLACK;
+
+    
+}
+#display::-webkit-scrollbar {
+    display: block;
+    height: 3px;
+    
+}
+ .button{
+    width: 300px;
+   height: 30vh;
+   box-sizing: border-box;
+}
+ button{
+    height: 60px;
+    width: 70px;
+    border: 0;
+    border-radius: 30px;
+    margin: 6px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+    border: 1.1px solid rgb(97, 92, 92);
+    box-shadow: rgb(235, 224, 224);
+    box-shadow: -4px -4px 3px  rgb(192, 192, 192), 3px 3px 3px rgb(192, 192, 192);
+    font-weight: 800;
+   }
+button:focus{
+    box-shadow: inset -4px -3px 2px rgb(192, 192, 192), inset  4px 3px 2px rgb(192, 192, 192);
+    color: blue;
+ }
+button:hover{
+    transform:scalez(10);
+}
+button#equal{
+    height: 60px;
+    position: relative;
+    bottom: -70px;
+    top: 119px;
+}
+/*light theme*/
+.calculator{
+    background-color: #fbfefb;
+    
+}
+.calculator #display{
+    background-color: #0a1e23;
+    color: #eee5e5;
+}
+.calculator button#clear{
+    background-color: #db7f8e;
+    color:#ffdbda;
+}
+.calculator button.btn-number{
+    background-color: #eee5e5;
+    color: black;
+
+}
+.calculator button.btn-operator{
+    background-color: #eee5e5;;
+    color: black;
+    box-shadow: #f8fafb;
+    
+}
+.calculator button.btn-equal{
+    background-color: #eee5e5;;
+    color: black;
+}
+/*dark theme*/
+.calculator.dark{
+    background-color: #071115
+}
+.calculator.dark #display{
+    color: #f8fbfd;
+}
+.calculator.dark button#clear{
+    
+     width: 70px;
+    background-color: #785964;
+    color:#eee5e5 ;
+    border-radius: 2.0px;
+}
+.calculator.dark button.btn-number{
+    background-color: #eee5e5;;
+    color: black;
+}
+.calculator.dark button .btn-operator{
+    background-color: #afbfc0;
+    color: #4e8098;
+}
+.calculator.dark button .btn-equal{
+    background-color: #566246
+      }
+.btn-plus{
+    height: 128px;
+    position: relative;
+    bottom: -118px;
+    overflow: hidden;
+}
+.one,.two,.three{
+    position: relative;
+    top: 50px
+     
+}
+.clear,.divide, .multiply{
+    position: relative;
+    bottom: 320px;
+    margin-right: -15px;
+}
+.seven, .eight, .nine, .subtract{
+    position: relative;
+    bottom: -117px;
+}
+.four, .five,.six{
+    position: relative;
+    bottom:-84px
+}
+.btn-equal, .dot, .zero, .backspace{
+    position: relative;
+    top: 50px
+}
+.divide, .multiply{
+    margin-left: 22px;
+}
+ 
+@media (min-width: 500px) {
+    .calculator{
+       max-width: 390px;
+   }
+   .theme-toggler {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color:#fff;
+    cursor: pointer;
+    z-index: 1;
+}
+.theme-toggler.active{
+    color: #333;
+}
+
+.theme-toggler.active::before{
+    background-color: #fff;
+    
+}
+.theme-toggler::before {
+    content: "";
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #333;
+    z-index: -1;
+}
+    #display{
+       max-width: 298px;
+      }
+    .button{
+        width: 400px;
+    }
+    button#equal{
+    height: 60px;
+    position: relative;
+    bottom: -70px;
+    top: 92px;
+    min-width: auto;
+    background-color: rgb(164, 164, 221);
+}
+
+.calculator.dark button#clear{
+    
+    width: 70px;
+   background-color: red;
+   color:#eee5e5 ;
+   border-radius: 30px;
+}
+.btn-plus{
+    height: 128px;
+    position: relative;
+    bottom: -90px;
+    overflow: hidden;
+    background-color: green;
+}
+.one,.two,.three{
+    position: relative;
+    top: 20px;
+}
+.clear,.divide, .multiply{
+    position: relative;
+    bottom: 340px;
+    margin-right: -15px;
+    
+}
+.seven, .eight, .nine, .subtract{
+    position: relative;
+    bottom: -117px;
+    top: 90px
+}
+.four, .five,.six{
+    position: relative;
+    bottom: -55px
+}
+.btn-equal, .dot, .zero, .backspace{
+    position: relative;
+    top: 20px
+}
+.divide, .multiply{
+    margin-left: 22px;
+}
+}
+@media (max-width: 767px){
+    .calculator{
+        max-width: 390px;
+     }
+     .theme-toggler {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        color:#fff;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .theme-toggler.active{
+        color: #333;
+    }
+    
+    .theme-toggler.active::before{
+        background-color: #fff;
+        
+    }
+    .theme-toggler::before {
+        content: "";
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-color: #333;
+        z-index: -1;
+    }
+    #display{
+         max-width: 298px;
+    }
+
+}
+
+
+
+
